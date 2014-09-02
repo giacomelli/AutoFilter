@@ -1,0 +1,36 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoFilter.UnitTests\AutoFilterBuilderTest.cs">
+    <Files>
+      <File FileName="AutoFilter.UnitTests\AutoFilterBuilderTest.cs" Line="4" Column="4" />
+      <File FileName="AutoFilter\AutoFilterBuilder.cs" Line="19" Column="19" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="AutoFilter" expanded="True" />
+          <Node name="AutoFilter.UnitTests" expanded="True">
+            <Node name="AutoFilterBuilderTest.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="AutoFilter.UnitTests" expanded="True">
+            <Node name="AutoFilter" expanded="True">
+              <Node name="UnitTests" expanded="True">
+                <Node name="AutoFilterBuilderTest" expanded="True" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\giacomelli\Dropbox\personal\Diego Giacomelli\Middleware\AutoFilter\src\AutoFilter.UnitTests\AutoFilterBuilderTest.cs" line="34" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

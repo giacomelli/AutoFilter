@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7821399-2D5F-430C-A2EB-282601B4D2FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AutoFilter.UnitTests</RootNamespace>
+    <AssemblyName>AutoFilter.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework" />
+    <Reference Include="Ionic.Utils.Zip">
+      <HintPath>..\packages\TestSharp.1.0.2\lib\net40\Ionic.Utils.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="TestSharp">
+      <HintPath>..\packages\TestSharp.1.0.2\lib\net40\TestSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="AutoFilterBuilderTest.cs" />
+    <Compile Include="BooleanEqualAutoFilterStrategyTest.cs" />
+    <Compile Include="StringContainsAutoFilterStrategyTest.cs" />
+    <Compile Include="EnumEqualAutoFilterStrategyTest.cs" />
+    <Compile Include="DoubleEqualAutoFilterStrategyTest.cs" />
+    <Compile Include="Int32EqualAutoFilterStrategyTest.cs" />
+    <Compile Include="DateTimeEqualAutoFilterStrategyTest.cs" />
+    <Compile Include="StringContainsIgnoreCaseAutoFilterStrategyTest.cs" />
+    <Compile Include="Stubs\TargetStub.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoFilter\AutoFilter.csproj">
+      <Project>{C7091433-2BCC-40E6-9907-E4DC8C8DD74C}</Project>
+      <Name>AutoFilter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>
