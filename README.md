@@ -5,6 +5,13 @@ An easy way to auto build expression trees filters from an user input.
 
 --------
 
+
+##Setup
+
+####NuGet
+PM> Install-Package AutoFilter
+
+
 ##Strategies
 - BooleanEqualAutoFilterStrategy
 - DateTimeEqualAutoFilterStrategy
@@ -41,45 +48,52 @@ var expression = builder.Build(filter);
 // Filters the data.
 var filteredData = data.Where(expression.Compile());
 ```
-In the sample above, the filter variable is string variable input by the user.
-Below the results in filteredData for each sample user input.
+In the sample above, the filter variable is a string variable input by the user.
+Below the results in filteredData variable for each sample user input.
 
 ```csharp
-filter = "c"
-
+filter = "c";
 String: String ABC, DateTime: 02/01/2001 00:00:00, Int32: 1, Boolean: True
 String: String CDE, DateTime: 05/04/2003 00:00:00, Int32: 2, Boolean: False
 
+filter = "d";
+String: String CDE, DateTime: 05/04/2003 00:00:00, Int32: 2, Boolean: False
+
+filter = "5/4/2003";
+String: String CDE, DateTime: 05/04/2003 00:00:00, Int32: 2, Boolean: False
+
+filter = "3";
+String: String EFG, DateTime: 08/07/2006 00:00:00, Int32: 3, Boolean: True
+
+filter = "true";
+String: String ABC, DateTime: 02/01/2001 00:00:00, Int32: 1, Boolean: True
+String: String EFG, DateTime: 08/07/2006 00:00:00, Int32: 3, Boolean: True
 ```
 
-## EF ready
-In other words, all IAutoFilterStrategy implementations can be translate by Entity Framework to SQL where clauses.
+##EF ready
+In other words, all IAutoFilterStrategy implementations can be translated by Entity Framework to SQL where clauses.
 
-FAQ
--------- 
-Having troubles? 
+##FAQ
+
+####Having troubles? 
  - Ask on [Stack Overflow](http://stackoverflow.com/search?q=AutoFilter)
 
-Roadmap
--------- 
-  - Publish a NuGet package.
+##Roadmap
+
+  - Add new strategies.
  
 --------
 
-How to improve it?
-======
-
+##How to improve it?
 - Create a fork of [AutoFilter](https://github.com/giacomelli/AutoFilter/fork). 
 - Did you change it? [Submit a pull request](https://github.com/giacomelli/AutoFilter/pull/new/master).
 
 
-License
-======
+##License
 
 Licensed under the The MIT License (MIT).
 In others words, you can use this library for developement any kind of software: open source, commercial, proprietary and alien.
 
 
-Change Log
-======
+##Change Log
  - 0.1.0 First version.
