@@ -1,5 +1,4 @@
 #AutoFilter
-[![Build Status](https://travis-ci.org/giacomelli/AutoFilter.png?branch=master)](https://travis-ci.org/giacomelli/AutoFilter)
 
 An easy way to auto build expression trees filters from an user input.
 
