@@ -95,4 +95,5 @@ In others words, you can use this library for developement any kind of software:
 
 
 ##Change Log
- - 0.1.0 First version.
+ - 0.0.2 HelperSharp updated.
+ - 0.0.1 First version.
