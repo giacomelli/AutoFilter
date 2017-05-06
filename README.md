@@ -1,17 +1,17 @@
-#AutoFilter
+# AutoFilter
 
 An easy way to auto build expression trees filters from an user input.
 
 --------
 
 
-##Setup
+## Setup
 
-####NuGet
+#### NuGet
 PM> Install-Package AutoFilter
 
 
-##Strategies
+## Strategies
 - BooleanEqualAutoFilterStrategy
 - DateTimeEqualAutoFilterStrategy
 - DoubleEqualAutoFilterStrategy
@@ -22,7 +22,7 @@ PM> Install-Package AutoFilter
 
 --------
 
-##Usage
+## Usage
 ```csharp
 // The user input string filter.
 string filter;
@@ -69,31 +69,26 @@ String: String ABC, DateTime: 02/01/2001 00:00:00, Int32: 1, Boolean: True
 String: String EFG, DateTime: 08/07/2006 00:00:00, Int32: 3, Boolean: True
 ```
 
-##EF ready
+## EF ready
 In other words, all IAutoFilterStrategy implementations can be translated by Entity Framework to SQL where clauses.
 
-##FAQ
+## FAQ
 
-####Having troubles? 
+#### Having troubles? 
  - Ask on [Stack Overflow](http://stackoverflow.com/search?q=AutoFilter)
 
-##Roadmap
+## Roadmap
 
   - Add new strategies.
  
 --------
 
-##How to improve it?
+## How to improve it?
 - Create a fork of [AutoFilter](https://github.com/giacomelli/AutoFilter/fork). 
 - Did you change it? [Submit a pull request](https://github.com/giacomelli/AutoFilter/pull/new/master).
 
 
-##License
+## License
 
 Licensed under the The MIT License (MIT).
 In others words, you can use this library for developement any kind of software: open source, commercial, proprietary and alien.
-
-
-##Change Log
- - 0.0.2 HelperSharp updated.
- - 0.0.1 First version.
